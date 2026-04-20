@@ -21,6 +21,11 @@ jobs:
         run: bun install
       
       - name: Run server tests
+        # 注入环境变量，解决权限校验失败问题
+        env:
+          ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET || 'test-secret' }}
         run: bun run test
         working-directory: ./server
       
@@ -99,6 +104,11 @@ jobs:
         run: bun install
       
       - name: Run tests with coverage
+        # 同样在 coverage 步骤中注入环境变量
+        env:
+          ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET || 'test-secret' }}
         run: bun run test:coverage
       
       - name: Upload coverage to Codecov
