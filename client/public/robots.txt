@@ -4,4 +4,4 @@ Disallow: /writing/
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.xzgx.eu.cc/sitemap.xml
+Sitemap: https://xzgx.eu.cc/sitemap.xml
