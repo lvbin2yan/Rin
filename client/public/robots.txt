@@ -2,6 +2,6 @@ User-agent: Googlebot
 Disallow: /writing/
 
 User-agent: *
-Allow: /
+Allow: / 
 
-Sitemap: https://xzgx.eu.cc/sitemap.xml
+Sitemap: https://xzgx.eu.cc/sitemap.xml 
