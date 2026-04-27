@@ -135,7 +135,7 @@ jobs:
       - name: Generate Sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url-path: https://blog.xzgx.eu.cc/
+          base-url-path: https://xzgx.eu.cc/
           path-to-root: ./dist/client  # 对应 Rin 编译后的静态文件目录
           sitemap-format: xml
           additional-extensions: html  
